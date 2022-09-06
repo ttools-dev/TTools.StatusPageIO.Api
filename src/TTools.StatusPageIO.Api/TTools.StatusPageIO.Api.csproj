@@ -8,4 +8,27 @@
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <PackageId>TTools.StatusPageIO.Api</PackageId>
+        <Description>API to retrieve status information from public statuspage.io API endpoints</Description>
+        <Authors>TTools</Authors>
+
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+
+        <Copyright>TTools 2022</Copyright>
+        <PackageProjectUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>statuspage;statuspage.io;httpclient</PackageTags>
+
+        <PackageReleaseNotes>
+            Initial release, supporting a single registered instance of a client per DI container
+        </PackageReleaseNotes>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageLicenseUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api/tree/main/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
 </Project>
