@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 using JetBrains.Annotations;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,7 @@ public static class StatusPageServiceCollectionExtensions
     /// <param name="serviceCollection">The service collection to register the client against</param>
     /// <param name="configureAction">The action to configure the status page HttpClient</param>
     /// <returns>The HttpClient's builder</returns>
-    [PublicAPI]
+    [PublicAPI, SuppressMessage("ReSharper", "InconsistentNaming")]
     public static IHttpClientBuilder AddStatusPageHttpClient(this IServiceCollection serviceCollection,
         Action<IServiceProvider, StatusPageIoClientConfiguration>? configureAction)
     {
@@ -37,7 +38,7 @@ public static class StatusPageServiceCollectionExtensions
     /// <param name="serviceCollection">The service collection to register the client against</param>
     /// <param name="configureAction">The action to configure the status page HttpClient</param>
     /// <returns>The HttpClient's builder</returns>
-    [PublicAPI]
+    [PublicAPI, SuppressMessage("ReSharper", "InconsistentNaming")]
     public static IHttpClientBuilder AddStatusPageHttpClient(this IServiceCollection serviceCollection,
         Action<IServiceProvider, HttpClient> configureAction)
     {
