@@ -3,7 +3,7 @@ namespace TTools.StatusPageIO.Api.Models;
 public class Incident
 {
     [JsonPropertyName("id")]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [JsonPropertyName("created_at")]
     public DateTimeOffset CreatedAt { get; set; }
@@ -19,21 +19,21 @@ public class Incident
 
     // TODO: enum??
     [JsonPropertyName("impact")]
-    public string Impact { get; set; }
+    public string Impact { get; set; } = null!;
 
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
     [JsonPropertyName("page_id")]
-    public string PageId { get; set; }
+    public string PageId { get; set; } = null!;
 
     [JsonPropertyName("shortlink")]
-    public Uri Shortlink { get; set; }
+    public Uri Shortlink { get; set; } = null!;
 
     // TODO: enum
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string Status { get; set; } = null!;
 
     [JsonPropertyName("incident_updates")]
-    public IList<IncidentUpdate> Updates { get; set; }
+    public IList<IncidentUpdate> Updates { get; set; } = null!;
 }

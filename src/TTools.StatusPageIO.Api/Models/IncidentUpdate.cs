@@ -3,7 +3,7 @@ namespace TTools.StatusPageIO.Api.Models;
 public class IncidentUpdate
 {
     [JsonPropertyName("id")]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [JsonPropertyName("created_at")]
     public DateTimeOffset CreatedAt { get; set; }
@@ -15,11 +15,11 @@ public class IncidentUpdate
     public DateTimeOffset DisplayAt { get; set; }
 
     [JsonPropertyName("body")]
-    public string Body { get; set; }
+    public string Body { get; set; } = null!;
 
     [JsonPropertyName("incident_id")]
-    public string IncidentId { get; set; }
+    public string IncidentId { get; set; } = null!;
 
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string Status { get; set; } = null!;
 }

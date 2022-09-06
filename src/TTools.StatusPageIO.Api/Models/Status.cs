@@ -3,10 +3,10 @@ namespace TTools.StatusPageIO.Api.Models;
 public class Status
 {
     [JsonPropertyName("description")]
-    public string Description { get; set; }
+    public string Description { get; set; } = null!;
 
     // TODO: enum
     // none, minor, major, or critical
     [JsonPropertyName("indicator")]
-    public string Indicator { get; set; }
+    public string Indicator { get; set; } = null!;
 }
