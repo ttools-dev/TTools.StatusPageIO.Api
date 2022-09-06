@@ -24,8 +24,7 @@ public static class StatusPageServiceCollectionExtensions
             (serviceProvider, httpClient) =>
             {
                 var configuration = new StatusPageIoClientConfiguration();
-                if (configureAction is not null)
-                    configureAction(serviceProvider, configuration);
+                configureAction?.Invoke(serviceProvider, configuration);
 
                 SetupHttpClient(httpClient);
                 httpClient.BaseAddress = configuration.StatusPageBaseUri;
