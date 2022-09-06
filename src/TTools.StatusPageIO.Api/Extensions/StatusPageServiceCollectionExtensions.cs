@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using JetBrains.Annotations;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TTools.StatusPageIO.Api.Extensions;
@@ -14,6 +15,7 @@ public static class StatusPageServiceCollectionExtensions
     /// <param name="serviceCollection">The service collection to register the client against</param>
     /// <param name="configureAction">The action to configure the status page HttpClient</param>
     /// <returns>The HttpClient's builder</returns>
+    [PublicAPI]
     public static IHttpClientBuilder AddStatusPageHttpClient(this IServiceCollection serviceCollection,
         Action<IServiceProvider, StatusPageIoClientConfiguration>? configureAction)
     {
@@ -35,6 +37,7 @@ public static class StatusPageServiceCollectionExtensions
     /// <param name="serviceCollection">The service collection to register the client against</param>
     /// <param name="configureAction">The action to configure the status page HttpClient</param>
     /// <returns>The HttpClient's builder</returns>
+    [PublicAPI]
     public static IHttpClientBuilder AddStatusPageHttpClient(this IServiceCollection serviceCollection,
         Action<IServiceProvider, HttpClient> configureAction)
     {
