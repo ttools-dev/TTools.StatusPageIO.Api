@@ -1,6 +1,6 @@
 namespace TTools.StatusPageIO.Api.Models;
 
-public class ComponentModel
+public record ComponentModel
 {
     [JsonPropertyName("id")]
     public string Id { get; set; } = null!;

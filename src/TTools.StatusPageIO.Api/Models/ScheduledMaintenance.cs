@@ -1,6 +1,6 @@
 namespace TTools.StatusPageIO.Api.Models;
 
-public class ScheduledMaintenance : Incident
+public record ScheduledMaintenance : Incident
 {
     [JsonPropertyName("scheduled_for")]
     public DateTimeOffset ScheduledFor { get; set; }

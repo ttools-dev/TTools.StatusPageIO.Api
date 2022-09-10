@@ -1,6 +1,6 @@
 namespace TTools.StatusPageIO.Api.Models;
 
-public class IncidentUpdate
+public record IncidentUpdate
 {
     [JsonPropertyName("id")]
     public string Id { get; set; } = null!;

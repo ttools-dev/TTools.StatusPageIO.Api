@@ -1,6 +1,6 @@
 namespace TTools.StatusPageIO.Api.Models;
 
-public class Status
+public record Status
 {
     [JsonPropertyName("description")]
     public string Description { get; set; } = null!;

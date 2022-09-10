@@ -1,6 +1,6 @@
 namespace TTools.StatusPageIO.Api.Models.Response;
 
-public class SummaryResponse : BaseResponse
+public record SummaryResponse : BaseResponse
 {
     [JsonPropertyName("status")]
     public Status Status { get; set; } = null!;
