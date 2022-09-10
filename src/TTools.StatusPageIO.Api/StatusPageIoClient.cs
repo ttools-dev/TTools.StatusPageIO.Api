@@ -14,7 +14,6 @@ public class StatusPageIoClient : IStatusPageIoClient
     private const string ActiveMaintenancesEndpoint = "/api/v2/scheduled-maintenances/active.json";
     private const string AllMaintenancesEndpoint = "/api/v2/scheduled-maintenances.json";
 
-    // TODO: IHttpClientFactory
     private readonly HttpClient _httpClient;
 
     // TODO: Action to configure
