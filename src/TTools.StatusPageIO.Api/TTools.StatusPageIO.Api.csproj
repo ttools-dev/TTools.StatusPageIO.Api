@@ -21,7 +21,7 @@
         <PackageProjectUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</PackageProjectUrl>
         <RepositoryUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>statuspage;statuspage.io;httpclient</PackageTags>
+        <PackageTags>statuspage;statuspageio;statuspage.io;httpclient</PackageTags>
 
         <PackageReleaseNotes>
             Initial release, supporting a single registered instance of a client per DI container
