@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using TTools.StatusPageIO.Api.Models.Response;
 
 namespace TTools.StatusPageIO.Api;
@@ -15,6 +15,9 @@ public class StatusPageIoClient : IStatusPageIoClient
     private const string AllMaintenancesEndpoint = "/api/v2/scheduled-maintenances.json";
 
     private readonly HttpClient _httpClient;
+
+    // ReSharper disable once RedundantDefaultMemberInitializer
+    private bool _disposing = false;
 
     // TODO: Action to configure
     public StatusPageIoClient(HttpClient httpClient)
@@ -105,5 +108,13 @@ public class StatusPageIoClient : IStatusPageIoClient
         return deserializedResponse;
     }
 
-    public void Dispose() => _httpClient.Dispose();
+    public void Dispose()
+    {
+        // Should let the underlying DI container dispose of the HttpMessageHandler if we didn't create it
+        if (_disposing)
+            return;
+
+        _disposing = true;
+        _httpClient.Dispose();
+    }
 }
