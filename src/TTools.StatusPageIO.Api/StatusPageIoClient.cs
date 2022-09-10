@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using TTools.StatusPageIO.Api.Models.Response;
 
 namespace TTools.StatusPageIO.Api;
@@ -105,6 +105,4 @@ public class StatusPageIoClient : IStatusPageIoClient
 
         return deserializedResponse;
     }
-
-    public void Dispose() => _httpClient.Dispose();
 }

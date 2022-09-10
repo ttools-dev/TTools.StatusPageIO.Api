@@ -3,7 +3,7 @@ using TTools.StatusPageIO.Api.Models.Response;
 
 namespace TTools.StatusPageIO.Api;
 
-public interface IStatusPageIoClient : IDisposable
+public interface IStatusPageIoClient
 {
     #region Summary
 
