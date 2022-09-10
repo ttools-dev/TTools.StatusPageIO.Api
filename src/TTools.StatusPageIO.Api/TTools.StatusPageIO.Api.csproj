@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>TTools.StatusPageIO.Api</PackageId>
+        <Description>API to retrieve status information from public statuspage.io API endpoints</Description>
+        <Authors>TTools</Authors>
+
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+
+        <Copyright>TTools 2022</Copyright>
+        <PackageProjectUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>statuspage;statuspageio;statuspage.io;httpclient</PackageTags>
+
+        <PackageReleaseNotes>
+            Initial release, supporting a single registered instance of a client per DI container
+        </PackageReleaseNotes>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageLicenseUrl>https://github.com/ttools-dev/TTools.StatusPageIO.Api/tree/main/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+      <PackageReference Include="System.Text.Json" Version="6.0.5" />
+    </ItemGroup>
+
+</Project>

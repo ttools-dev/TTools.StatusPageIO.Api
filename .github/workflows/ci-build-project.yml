@@ -1,0 +1,17 @@
+name: 'Build .NET Solution'
+on: pull_request
+jobs:
+  build:
+    name: 'Build Solution'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+        # dotnet version is sourced from global.json
+      - name: 'Setup dotNET'
+        id: install_dotnet
+        uses: actions/setup-dotnet@v1
+
+      - name: 'Build Solution using .NET CLI'
+        id: build_solution
+        run: 'dotnet build ./TTools.StatusPageIO.Api.sln'
